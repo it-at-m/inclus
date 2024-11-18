@@ -1,0 +1,67 @@
+.filter-container {
+	width: 375px;
+	margin: auto 24px;
+}
+
+@media only screen and (max-width: 480px) {
+	.filter-container {
+		width: calc(100% - 24px);
+		margin-right: 12px;
+		margin-left: 12px;
+	}
+}
+
+.Filter.wrapper {
+	width: 100%;
+	display: flex;
+	position: relative;
+	z-index: 1001;
+	padding: 0;
+	margin-top: -10px;
+	transition: opacity 0.3s;
+}
+
+@media only screen and (max-width: 480px) {
+	.Filter.wrapper {
+		margin-top: -4px;
+	}
+
+	.Filter.wrapper.selectedPlace {
+		opacity: 0;
+		pointer-events: none;
+	}
+}
+
+.Filter .selectButton {
+	background-color: #fff;
+	border-radius: 8px;
+	padding: 6px 3px;
+	border-radius: 10px;
+	border: 2px solid #6f5af2;
+	font-size: 14px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	width: 30%;
+	flex-grow: 1;
+}
+
+.Filter .selectButton:not(:last-of-type) {
+	margin-right: 5px;
+}
+
+@media only screen and (max-width: 480px) {
+	.Filter.wrapper {
+		justify-content: center;
+	}
+
+	.Filter .selectButton {
+		height: 40px;
+	}
+}
+
+.Filter .menuitem {
+	background-color: #fff;
+}
+
+.Filter .notSelected {
+	color: #3c3c4399;
+}

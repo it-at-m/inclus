@@ -1,0 +1,28 @@
+.Privacy {
+	padding: 16px;
+	background-color: white;
+}
+
+.Privacy h1,
+.Privacy h2 {
+	margin-bottom: 8px;
+}
+
+.Privacy h3 {
+	font-size: 1em;
+}
+
+.Privacy ul,
+p {
+	max-width: 700px;
+}
+
+.Privacy p:not(:last-of-type) {
+	margin-bottom: 16px;
+}
+
+.Privacy .highlight {
+	background-color: #e7e5f4;
+	padding: 32px 16px 24px 16px;
+	margin: -16px -16px 16px -16px;
+}

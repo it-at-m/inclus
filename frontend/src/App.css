@@ -1,0 +1,155 @@
+:root {
+	--grid-base: 4px;
+	--color-highlight: #6f5af2;
+	--color-light-bg: #e7e5f4;
+	--nearest-header-height: 56px;
+	--nearest-item-height: 61px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--color-highlight);
+	font-size: 17px;
+	line-height: 22px;
+}
+
+main {
+	display: flex;
+}
+
+.English {
+	z-index: 1000;
+}
+
+.row {
+	display: flex;
+	flex-direction: row;
+}
+
+.row.gap-1 > * {
+	margin-right: var(--grid-base);
+}
+.row.gap-2 > * {
+	margin-right: calc(var(--grid-base) * 2);
+}
+
+.col {
+	display: flex;
+	flex-direction: column;
+}
+.col.gap-1 > * {
+	margin-bottom: var(--grid-base);
+}
+.col.gap-2 > * {
+	margin-bottom: calc(var(--grid-base) * 2);
+}
+
+.gap {
+	gap: 16px;
+}
+
+.grow {
+	flex-grow: 1;
+}
+
+.align-stretch {
+	align-items: stretch;
+}
+
+.align-start {
+	align-items: flex-start;
+}
+
+.align-center {
+	align-items: center;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.justify-between {
+	justify-content: space-between;
+}
+
+.justify-end {
+	justify-content: flex-end;
+}
+
+p {
+	margin: 0 0 calc(var(--grid-base) * 2) 0;
+}
+
+button,
+a.button {
+	font-family: Barlow;
+	font-size: 17px;
+	line-height: 150%;
+	min-height: 40px;
+	color: black;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	user-select: none;
+	text-decoration: none;
+}
+
+a.button {
+	display: inline-flex;
+	padding-left: calc(var(--grid-base) * 2);
+	padding-right: calc(var(--grid-base) * 2);
+	align-items: center;
+}
+
+button:hover,
+a.button:hover {
+	opacity: 0.85;
+}
+
+button.primary,
+a.button.primary {
+	background-color: var(--color-highlight);
+	color: white;
+}
+
+button.secondary,
+a.button.secondary {
+	background-color: transparent;
+	border: 1px solid var(--color-highlight);
+	color: var(--color-highlight);
+}
+
+button.secondary:hover,
+a.button.secondary.hover {
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+button.primary:active,
+button.secondary:active,
+a.button.primary:active,
+a.button.secondary:active {
+	transform: translateY(1px) scaleY(0.99);
+	box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+button.rounded,
+a.button.rounded {
+	border-radius: 10px;
+}
+
+button.icon-only,
+a.button.icon-only {
+	background: none;
+}
+
+button.with-icon,
+a.button.with-icon {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 16px;
+	padding: 0 16px;
+}

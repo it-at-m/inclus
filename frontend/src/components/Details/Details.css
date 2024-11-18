@@ -1,0 +1,139 @@
+.Details.container {
+	z-index: 1002;
+	position: fixed;
+	color: black;
+	overflow: hidden;
+	background-color: var(--color-light-bg);
+	border-radius: 10px 10px 0 0;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	transition: all 0.2s ease-in-out;
+}
+
+.Details .scrollarea {
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding: 16px;
+}
+
+@media only screen and (min-width: 481px) {
+	.Details.container {
+		top: 0;
+		left: 0;
+		margin: 128px 0 0 24px;
+		width: 375px;
+		height: calc(100vh - 128px);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.Details.container {
+		width: 100%;
+		height: 85%;
+		top: 15%;
+		left: 0;
+		margin: 0;
+	}
+}
+
+.Details h1 {
+	font-weight: normal;
+	font-size: 28px;
+	line-height: 34px;
+	margin: 0;
+}
+
+.Details h3 {
+	font-size: 100%;
+	margin: 8px 0 0 0;
+}
+
+.Details p {
+	margin: 0;
+	line-height: 135%;
+}
+
+.Details ul {
+	margin: 0;
+	padding: 0 0 0 16px;
+	line-height: 135%;
+}
+
+.Details ul.ListDistances {
+	list-style: none;
+	padding-left: 0;
+}
+
+.Details a {
+	color: black;
+}
+
+.Details button.start-route {
+	min-height: 54px;
+	padding: 8px 16px;
+	line-height: 110%;
+}
+
+.Details .distance {
+	font-size: 13px;
+}
+
+.Card {
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Card button {
+	margin: 16px;
+	border-radius: 6px;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.Floorplan img {
+	border-radius: 10px;
+	min-height: 300px;
+}
+
+.Floorplan .Legend {
+	transition: max-height 0.5s;
+	max-height: 500px;
+	overflow: hidden;
+}
+
+.Floorplan .Legend.open {
+	border-bottom: 1px solid #efefef;
+}
+
+.Floorplan .Legend.closed {
+	max-height: 0;
+}
+
+.Floorplan .Legend-Item {
+	padding-left: calc(var(--grid-base) * 16);
+	min-height: calc(var(--grid-base) * 6);
+	background-repeat: no-repeat;
+	background-position-x: calc(var(--grid-base) * 4);
+}
+
+.DetailPhotos {
+	min-height: 146px;
+}
+
+.DetailPhotos.scroll-x {
+	margin-left: -16px;
+	margin-right: -16px;
+	padding: 0 16px;
+	overflow-x: auto;
+}
+
+.DetailPhotos img {
+	height: 120px;
+	border-radius: 10px;
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.DetailsNearestPlace {
+	cursor: pointer;
+	text-decoration: underline;
+}

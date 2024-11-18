@@ -1,0 +1,28 @@
+.Imprint {
+	padding: 16px;
+	background-color: white;
+}
+
+.Imprint h1,
+.Imprint h2 {
+	margin-bottom: 8px;
+}
+
+.Imprint h3 {
+	font-size: 1em;
+}
+
+.Imprint p {
+	max-width: 700px;
+}
+
+.Imprint p:not(:last-of-type) {
+	margin-bottom: 16px;
+}
+
+.Imprint .highlight {
+	width: 100vw;
+	background-color: #e7e5f4;
+	padding: 32px 16px 24px 16px;
+	margin: -16px -16px 16px -16px;
+}

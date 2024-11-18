@@ -1,0 +1,84 @@
+{
+	"name": "inclus-web",
+	"version": "1.0.0",
+	"description": "Places without barriers. Inclus is an app to find barrier-free places for wheelchair users and everyone else who prefers easy access.",
+	"keywords": [
+		"dps"
+	],
+	"type": "module",
+	"main": "src/index.tsx",
+	"dependencies": {
+		"@typeform/embed-react": "^2.19.0",
+		"@vercel/analytics": "^1.0.1",
+		"downshift": "^7.6.0",
+		"fuse.js": "^6.6.2",
+		"i18next": "^22.4.12",
+		"leaflet": "^1.8.0",
+		"leaflet-geosearch": "^3.6.1",
+		"markdown-to-jsx": "^7.2.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-i18next": "^12.2.0",
+		"react-leaflet": "^4.2.1",
+		"react-redux": "^8.0.2",
+		"react-router": "6.8.1",
+		"react-router-dom": "6.8.1",
+		"react-scripts": "5.0.1",
+		"web-vitals": "^3.0.2"
+	},
+	"devDependencies": {
+		"@babel/preset-typescript": "^7.21.5",
+		"@babel/runtime": "7.20.13",
+		"@testing-library/jest-dom": "^5.16.5",
+		"@testing-library/react": "^14.0.0",
+		"@types/jest": "^29.5.1",
+		"@types/leaflet": "^1.8.0",
+		"@types/react": "^18.0.20",
+		"@types/react-dom": "^18.0.6",
+		"@typescript-eslint/eslint-plugin": "^5.51.0",
+		"@typescript-eslint/parser": "^5.51.0",
+		"eslint": "^8.33.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-react": "^7.32.2",
+		"husky": "^8.0.3",
+		"jest": "^27.5.1",
+		"lint-staged": "^13.2.1",
+		"prettier": "2.8.4",
+		"typescript": "4.9.5"
+	},
+	"scripts": {
+		"generate-sitemap": "node ./tools/generateSitemap.js",
+		"start": "react-scripts start",
+		"build": "npm run generate-sitemap && npm run prepare-nearest-toilets && react-scripts build",
+		"test": "react-scripts test --env=jsdom --watchAll=false",
+		"eject": "react-scripts eject",
+		"prepare-hooks": "cd .. && husky install frontend/.husky && npx husky add frontend/.husky/pre-commit \"cd frontend && npx lint-staged && npm test\"",
+		"lint-frontend": "lint-staged",
+		"prepare-nearest-toilets": "node ./tools/storeNearestToilets.js"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --fix"
+		],
+		"*.{html,css,less,ejs}": [
+			"prettier --write"
+		],
+		"*.js": "eslint --cache --fix",
+		"*.{js,css,md}": "prettier --write"
+	},
+	"jest": {
+		"transformIgnorePatterns": [
+			"node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+		],
+		"moduleNameMapper": {
+			"react-leaflet": "<rootDir>/__mocks__/leaflet.js"
+		}
+	}
+}

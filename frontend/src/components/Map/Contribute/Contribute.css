@@ -1,0 +1,53 @@
+.Contribute {
+	position: absolute;
+	bottom: 43px;
+	left: 16px;
+	z-index: 1000;
+}
+
+.Contribute button.toggle {
+	font-weight: bold;
+	color: var(--color-highlight);
+}
+
+.Contribute .options {
+	background-color: white;
+	padding: var(--grid-base) calc(var(--grid-base) * 4)
+		calc(var(--grid-base) * 4) calc(var(--grid-base) * 4);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	width: 270px;
+}
+
+@media only screen and (min-width: 481px) {
+	.Contribute .options {
+		width: 375px;
+	}
+}
+
+.Contribute .options h3 {
+	font-size: 17px;
+	font-weight: normal;
+}
+
+.Contribute .options a:not(:last-of-type) {
+	margin-bottom: calc(var(--grid-base) * 2);
+}
+
+@media only screen and (max-width: 480px) {
+	/*Determine the Language control margin-bottom value based on the number of placeList*/
+	.margin-bottom-zero-items .Contribute {
+		bottom: calc(43px + var(--nearest-header-height));
+	}
+	.margin-bottom-one-items .Contribute {
+		bottom: calc(
+			43px + var(--nearest-header-height) + var(--nearest-item-height)
+		);
+	}
+	.margin-bottom-two-items .Contribute {
+		bottom: calc(
+			43px + var(--nearest-header-height) + var(--nearest-item-height) +
+				var(--nearest-item-height)
+		);
+	}
+}

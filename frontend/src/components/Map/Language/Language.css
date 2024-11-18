@@ -1,0 +1,40 @@
+.Lang {
+	position: absolute;
+	right: 16px;
+	bottom: 208px;
+	z-index: 1002;
+}
+
+.rootLang {
+	width: 44px;
+	height: 44px;
+	padding: 9px;
+	color: var(--color-highlight);
+	font-size: 17px;
+	font-weight: bold;
+	text-align: center;
+	appearance: none;
+	background-color: #f4f4f4;
+	cursor: pointer;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	border: 2px solid #f4f4f4;
+}
+
+@media only screen and (max-width: 480px) {
+	/* Determine the Language control margin-bottom value based on the number of placeList items */
+	.margin-bottom-zero-items .Lang {
+		bottom: calc(208px + var(--nearest-header-height));
+	}
+	.margin-bottom-one-items .Lang {
+		bottom: calc(
+			208px + var(--nearest-header-height) + var(--nearest-item-height)
+		);
+	}
+	.margin-bottom-two-items .Lang {
+		bottom: calc(
+			208px + var(--nearest-header-height) + var(--nearest-item-height) +
+				var(--nearest-item-height)
+		);
+	}
+}

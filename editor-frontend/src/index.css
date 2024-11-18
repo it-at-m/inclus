@@ -1,0 +1,92 @@
+.App {
+  width: 100vw;
+  place-items: center;
+}
+
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.fileUploadButton {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.fileDownloadButton {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.fileUploadContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+p {
+  margin: 0;
+}
+
+.filterInput {
+  margin: 10px 10px 0 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.filterText {
+  margin-left: 10px;
+}
+
+.placesList {
+  margin-top: 10px;
+}
+
+.placeRowHeader {
+  width: 600px;
+  background-color: lightcyan;
+  padding: 10px;
+  margin: 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.placeName {
+  cursor: pointer;
+}
+
+.placeHeaderButton {
+  margin: 5px;
+}
+
+.positionInput {
+  display: flex;
+  flex-direction: row;
+  width: 170px;
+  justify-content: space-between;
+}

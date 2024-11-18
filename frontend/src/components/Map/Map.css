@@ -1,0 +1,313 @@
+.map__container {
+	width: 100vw;
+	height: 100vh;
+	height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+	/* autoprefixer: ignore next */
+	height: stretch;
+	position: fixed;
+}
+
+.TitleBarMobile {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	padding: 0 calc(var(--grid-base) * 3) 25px calc(var(--grid-base) * 3);
+	background-color: var(--color-highlight);
+	color: white;
+	font-weight: bold;
+	pointer-events: none;
+}
+
+@media only screen and (min-width: 481px) {
+	.TitleBarMobile {
+		display: none;
+	}
+}
+
+button.map-control,
+a.button.map-control {
+	background-color: #f4f4f4;
+	padding: 9px;
+	cursor: pointer;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+	border-radius: 10px;
+	border: 2px solid #f4f4f4;
+	overflow: hidden;
+}
+
+button.map-control:hover,
+a.button.map-control:hover {
+	background-color: white;
+	opacity: 1;
+}
+
+a.map-control.contribute {
+	position: absolute;
+	bottom: 43px;
+	left: 16px;
+	z-index: 1000;
+	color: var(--color-highlight);
+	font-weight: bold;
+}
+
+/* Leaftlet CSS Overrides */
+
+.leaflet-bar a {
+	background-color: #f4f4f4;
+}
+
+.leaflet-bar a:hover {
+	background-color: white;
+}
+
+.leaflet-touch .leaflet-control-zoom.leaflet-bar {
+	border: none;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-touch .leaflet-control-zoom.leaflet-bar a {
+	width: 44px;
+	height: 44px;
+	line-height: 42px;
+	font-size: 30px;
+}
+
+.leaflet-touch .leaflet-control-zoom.leaflet-bar a:not(.leaflet-disabled) {
+	color: #6f5af2;
+}
+
+.leaflet-touch .leaflet-bar a:first-child {
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.leaflet-touch .leaflet-bar a:last-child {
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.leaflet-right .leaflet-control {
+	margin-right: 16px;
+}
+
+.leaflet-bottom .leaflet-control {
+	margin-bottom: 43px; /* factor in space for the legal bar */
+}
+
+.leaflet-control-zoom {
+	display: flex;
+	flex-direction: column;
+}
+
+.leaflet-control-geosearch.leaflet-geosearch-bar:not(.leaflet-control) {
+	display: flex;
+	margin: 16px 16px 0 16px;
+}
+
+.leaflet-geosearch-bar {
+	width: unset;
+	max-width: unset;
+}
+
+.leaflet-touch .leaflet-geosearch-bar form {
+	box-shadow: none;
+	position: relative;
+	padding: 0;
+	border: none;
+	background: none;
+	width: 100%;
+}
+
+@media only screen and (min-width: 481px) {
+	.leaflet-control-geosearch.leaflet-geosearch-bar:not(.leaflet-control) {
+		display: flex;
+		margin: 24px 24px 0 24px;
+	}
+
+	.leaflet-touch .leaflet-geosearch-bar form {
+		max-width: 375px;
+	}
+}
+
+.leaflet-touch .leaflet-geosearch-bar form input {
+	font-family: Barlow;
+	font-size: 16px;
+	height: 40px;
+	border-radius: 10px;
+	border: 2px solid var(--color-highlight);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-touch .leaflet-control-geosearch button.reset {
+	right: 6px;
+	border-radius: 6px;
+	background: transparent;
+}
+
+.leaflet-control-geosearch .results {
+	border-radius: 10px;
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+}
+
+.leaflet-control-geosearch .results.active {
+	margin: 8px 0;
+	border: none;
+}
+
+.leaflet-geosearch-bar {
+	z-index: 1100;
+}
+
+div.leaflet-control-attribution.leaflet-control {
+	margin-bottom: 0px;
+}
+
+/* Search Control */
+.search-container {
+	position: relative;
+	z-index: 1003;
+	width: 375px;
+	margin: 24px;
+}
+
+@media only screen and (max-width: 480px) {
+	.search-container {
+		width: calc(100% - 24px);
+		margin: 24px 12px 16px 12px;
+	}
+}
+
+.search-input-wrapper {
+	display: flex;
+	align-items: center;
+	height: 41px;
+	width: 100%;
+	border-radius: 10px;
+	border: 2px solid #6f5af2;
+	background-color: #ffffff;
+	padding: 0 calc(var(--grid-base) * 2);
+}
+
+.search-input-wrapper .icon-search {
+	width: 18px;
+}
+
+.search-input {
+	flex-grow: 1;
+	font-style: normal;
+	font-weight: 400;
+	font-size: 19px;
+	outline: none;
+	border: none;
+	padding: 0;
+	margin-left: 0px;
+	margin-right: calc(var(--grid-base) * 2);
+	background-color: transparent;
+	color: black;
+}
+
+.search-input::placeholder {
+	color: #7b7b7b;
+}
+
+.search-input-icon {
+	width: 22px;
+	height: 22px;
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+
+.icon-search-clear {
+	width: 22px;
+	height: 22px;
+}
+
+.search-results {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	max-height: 200px;
+	overflow-y: auto;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	z-index: 1002;
+	background-color: #ffffff;
+	border-radius: 10px;
+	max-height: calc(6 * 6rem); /* Assuming each result has a height of 3rem */
+	overflow-y: hidden;
+	margin-top: 10px;
+}
+
+.search-results.open {
+	display: block;
+}
+
+.search-results .header {
+	padding: 8px;
+	align-items: center;
+}
+
+.search-results .header h3 {
+	font-size: 17px;
+	font-weight: normal;
+	margin: 0;
+}
+
+@media only screen and (max-width: 480px) {
+	.search-results .header {
+		display: none;
+	}
+}
+
+.icon-container-search-input {
+	margin-bottom: 4px;
+}
+
+/* Animations */
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.ControlButton.mobile-mode-container {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+
+	/*Determine the ZoomControl component margin-bottom value based on the number of placeList*/
+	.margin-bottom-zero-items {
+		.leaflet-bottom .leaflet-control {
+			margin-bottom: 99px;
+		}
+	}
+	.margin-bottom-one-items {
+		.leaflet-bottom .leaflet-control {
+			margin-bottom: 162px;
+		}
+	}
+	.margin-bottom-two-items {
+		.leaflet-bottom .leaflet-control {
+			margin-bottom: 225px;
+		}
+	}
+}

@@ -1,0 +1,113 @@
+[
+  {
+    "title": "WC Dean & David im Tal",
+    "short_description": "Halböffentliche Toilette in einer Gaststätte.",
+    "photo": "watermarked/wc-af/deanda1WC1f1.jpg",
+    "plan": "watermarked/wc-plan/deanda1WC1.jpg",
+    "position": [
+      48.1353546,
+      11.5809636
+    ],
+    "address": "Tal 42",
+    "eurokey": "ka",
+    "ramp_steepness": 15,
+    "ramp_length": "3,5",
+    "city": "München",
+    "modified": "2020-11-26 17:00:14",
+    "direction": "Man geht nicht ins Tal rein, sondern biegt gleich beim Isartor nach links in die Westenriederstraße ein. Das zweite Geschäft (Hausnummer 49) ist \"Der Lampenschirm\". Öffnungszeiten Mo-Fr 10:00 - 19:00, Sa 10:00 - 18:30. Die Tür öffnet nach innen, Anschlag rechts auf 100 cm.",
+    "zip_code": 80331,
+    "id": 1,
+    "cbf_id": 2341,
+    "wc_details": "Das WC-Becken ist gegenüber der Tür. Es gibt eine Spülung im Rücken und eine im linken Bügel, wobei diese bei der Begehung nicht funktioniert hat (Dez 2013) Waschbecken Oberkante 86 cm, unterfahrbar bis 76 cm lichte Höhe. Drüber hängt ein Spiegel ab 100 cm vom Boden her gemessen.",
+    "wc_accessright": 103,
+    "wc_accessleft": 87,
+    "interior_description": "",
+    "grip": "lr",
+    "door_width": 92,
+    "access": "Man geht durch die Ladentür rein und geradeaus durch den Laden durch, fährt eine im Ladeninneren runter und dann hinten, d.h. zum Tal hin, wieder raus. Diese Tür öffnet nach innen, Anschlag rechts auf 95 cm. Man steht dann in einer kleinen Passage. Linkerhand ist ein Aufzug, mit dem man in den ersten Stock fahren kann - zu weiteren Dean & David Tischen und zum WC. Aufzugmaße: Türbreite 85 cm, Kabinenmaße 90x160 cm). Das rollstuhlgerechte WC ist ist gleichzeitig auch die Damentoilette.",
+    "closest_toilets": [
+      {
+        "id": 2,
+        "distance": 105
+      },
+      {
+        "id": 3,
+        "distance": 148
+      }
+    ]
+  },
+  {
+    "title": "WC Sporthaus Globetrotter",
+    "short_description": "Halböffentliche Toilette im Kaufhaus.\n",
+    "photo": "watermarked/wc-gm/ka-globet1f2WC.jpg",
+    "plan": "watermarked/wc-plan/ka-globet1WC.jpg",
+    "position": [
+      48.1347967,
+      11.5817345
+    ],
+    "address": "Isartorplatz 8 - 10",
+    "eurokey": "ka",
+    "ramp_steepness": 0,
+    "ramp_length": 0,
+    "city": "München",
+    "modified": "2021-05-29 17:07:07",
+    "direction": "Der Zugang zum Kaufhaus ist barrierefrei.",
+    "zip_code": 80331,
+    "id": 2,
+    "cbf_id": 7942,
+    "wc_details": "Die Spülung kann nur direkt hinter dem WC-Becken ausgelöst werden.  Rechts vom WC-Becken hängt eine Notrufschnur bis auf 80 cm über dem Boden.",
+    "wc_accessright": "",
+    "wc_accessleft": 110,
+    "interior_description": "Das Waschbecken ist auf 68 cm unterfahrbar, die Waschbeckenoberkante ist in 83 cm Höhe. Links und rechts vom Waschbecken ist je ein fester Bügel montiert. Über dem Becken hängt ein Spiegel ab Unterkante 90 cm.",
+    "grip": "lfr",
+    "door_width": 105,
+    "access": "Das behindertengerechte WC befindet sich zusammen mit der allgemeinen WC-Anlage im Untergeschoß.",
+    "closest_toilets": [
+      {
+        "id": 3,
+        "distance": 47
+      },
+      {
+        "id": 1,
+        "distance": 105
+      }
+    ]
+  },
+  {
+    "title": "WC Hans im Glück am Isartor",
+    "short_description": "Halböffentliche Toilette in einer Gaststätte.",
+    "photo": "watermarked/wc-gm/hansim1fWC1.jpg",
+    "plan": "watermarked/wc-plan/hansim1WC.jpg",
+    "position": [
+      48.1344114,
+      11.5819235
+    ],
+    "address": "Isartorplatz 8",
+    "eurokey": "ka",
+    "ramp_steepness": 0,
+    "ramp_length": 0,
+    "city": "München",
+    "modified": "2017-01-22 14:50:42",
+    "direction": "Das WC ist im hinteren Bereich des Lokals. ",
+    "zip_code": 80331,
+    "id": 3,
+    "cbf_id": 2348,
+    "wc_details": "Das WC-Becken ist  linkerhand von der Tür. Links vom WC-Becken hängt eine Notrufschnur vorbildlich bis ganz runter.",
+    "wc_accessright": "",
+    "wc_accessleft": 80,
+    "interior_description": "Das Waschbecken ist gegenüber der Tür, die Waschbeckenoberkante ist auf 81 cm und das Waschbecken ist auf 70 cm unterfahrbar. Über dem Waschbecken hängt ab 95 cm vom Bodenaus gemessen ein Spiegel.",
+    "grip": "l",
+    "door_width": 90,
+    "access": "",
+    "closest_toilets": [
+      {
+        "id": 2,
+        "distance": 47
+      },
+      {
+        "id": 1,
+        "distance": 148
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+.Form.embedded {
+	width: 100%;
+	height: 100vh;
+	height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+	/* autoprefixer: ignore next */
+	height: stretch;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.Form.embedded .tf-v1-widget,
+.Form.embedded .tf-v1-widget-fullscreen,
+.Form.embedded .tf-v1-widget iframe,
+.Form.embedded .tf-v1-widget-fullscreen iframe {
+	height: 100vh;
+	height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+	/* autoprefixer: ignore next */
+	height: stretch;
+}

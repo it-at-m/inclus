@@ -1,0 +1,64 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`parses a cbf csv line with warnings 1`] = `
+[
+  "Values of image filenames must not be empty and must be valid image filenames",
+  "Values at indexes 15 and 16 must not be empty to form a valid address",
+  "Value at index 19 cannot be empty",
+  "Value at index 31 cannot be empty",
+  "Value at index 6 cannot be empty",
+  "Value at index 18 must not be empty and must be a number, provided 0",
+  "Value at additional field wc_addinfo cannot be empty",
+  "Value at additional field wc_roominfos cannot be empty",
+  "Value at additional field wc_infos cannot be empty",
+]
+`;
+
+exports[`parses a valid cbf export csv line into a valid place object 1`] = `
+{
+  "access": "Das WC-Becken ist schräg links gegenüber von der Tür, links neben dem Waschbecken.",
+  "address": "Somestr. 2",
+  "cbf_id": 5,
+  "city": "Unterhaching",
+  "direction": "Das rollstuhlgerechte WC in einem Freibad",
+  "door_width": "75",
+  "eurokey": "1",
+  "grip": "lr",
+  "id": 5,
+  "interior_description": "Zwischen Umkleide und Duschbad ist eine Schiebetür, die nach links öffnet.",
+  "modified": "2023-08-29 11:15:20",
+  "photo": "watermarked/wc-af/ba-unterh1WC1f1.jpg",
+  "plan": "watermarked/wc-plan/ba-unterh1WC3c.jpg",
+  "position": [
+    48.0619761,
+    11.6208199,
+  ],
+  "ramp_length": "0",
+  "ramp_steepness": "0",
+  "short_description": "Bedingt öffentliche Toilette mit Dusche in einem Freibad, mit Euroschloss.",
+  "title": "WC Freibad",
+  "wc_accessleft": "75",
+  "wc_accessright": "105",
+  "wc_details": "",
+  "zip_code": 82008,
+}
+`;
+
+exports[`reports errors for eurokey, ramp, grip and door_width values 1`] = `
+[
+  "Value of additional field wc_euro must be either 0, 1 or ka provided vroum",
+  "Value at additional fields wc_ramp_incline must be a number, provided some percentage",
+  "Value of additional field wc_wheregrip must be one of: lr, l, rfl, flr, fr, none, lfr, r, fl,  provided lrrrrr",
+  "Value at additional fields wc_door_width must be a number, provided some centimeters",
+]
+`;
+
+exports[`reports errors if no id, title, position and short_description was submitted 1`] = `
+[
+  "Value at index 1 cannot be empty",
+  "Value at index 5 cannot be empty",
+  "Value at index 9 must be a number to represent correct latitude. Value at index 10 must be a number to represent correct longitude. ",
+  "Value at index 0 must not be empty and must be a number, provided 0",
+  "Value at index 0 must not be empty and must be a number, provided 0",
+]
+`;

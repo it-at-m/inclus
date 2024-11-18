@@ -1,0 +1,24 @@
+.Legal {
+	width: 100vw;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 1001;
+	white-space: nowrap;
+	background-color: rgba(244, 244, 244, 0.7);
+	overflow-x: scroll;
+	padding: var(--grid-base) calc(var(--grid-base) * 2);
+	font-size: 15px;
+
+	-ms-overflow-style: none; /* Internet Explorer 10+ */
+	scrollbar-width: none; /* Firefox */
+}
+
+.Legal::-webkit-scrollbar {
+	display: none; /* Safari and Chrome */
+}
+
+.Legal a {
+	color: black;
+	margin-right: calc(var(--grid-base) * 2);
+}
